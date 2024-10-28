@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+:root {
+    --main-color: rgb(112, 180, 112);
+    --sub-color: rgb(64, 89, 64);
+}
+
+.flex {
+    display: flex;
+}
+
+body {
+    background-color: #fff;
+}
+
+.wrap {
+    width: 1200px;
+    margin: auto;
+    border: 1px solid #000;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #000;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    background-color: #414141;
+    top: 100px;
+    left: 0;
+    transition: .4s;
+    z-index: 9;
+}
+
+header.on::after {
+    height: 150px;
+}
+
+header h1 {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 60%;
+    display: flex;
+    align-self: flex-end;
+}
+
+nav>ul {
+    flex: 1;
+}
+
+.main-menu {
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+}
+
+.main-menu li>a {
+    display: block;
+}
+
+.main-menu li:hover>a {
+    color: var(--sub-color);
+}
+
+.sub-menu li>a {
+    display: block;
+    padding: 8px;
+    color: var(--main-color);
+}
+
+.sub-menu li:hover>a {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    color: #fff;
+}
+
+.sub-menu {
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    display: none;
+}
+
+.slide-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slide-wrap {
+    width: 300%;
+    display: flex;
+    position: relative;
+}
+
+.slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+.slide1 {
+    background-image: url(/images/slide1.jpg);
+}
+
+.slide2 {
+    background-image: url(/images/slide2.jpg);
+}
+
+.slide3 {
+    background-image: url(/images/slide3.jpg);
+}
+
+.slide .summary {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: #00000068;
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.slide .summary h2 {
+    color: #fff;
+}
+
+.slide .summary p {
+    color: #fff;
+}
+
+.contents {
+    width: 100%;
+    height: 200px;
+    gap: 5px;
+}
+
+.contents .tab-box {
+    width: 33.3333%;
+    height: 100%;
+}
+
+.contents .tab-box .tab-menu {
+    width: 100%;
+}
+
+.contents .tab-box .tab-menu ul li {
+    width: 50%;
+    text-align: center;
+}
+
+.contents .tab-box .tab-menu ul li a.on {
+    background-color: var(--main-color);
+}
+
+.contents .tab-box .tab-menu ul li>a {
+    padding: 8px;
+    display: block;
+}
+
+.tabs {
+    width: 100%;
+    height: calc(100% - 40px);
+    position: relative;
+}
+
+.tab {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+}
+
+
+.contents .tab-box #notice {
+    width: 100%;
+}
+
+.contents .tab-box #notice ul li {
+    padding: 6px;
+    border-bottom: 1px solid var(--main-color);
+    justify-content: space-between;
+}
+
+.contents .tab-box #notice ul li>a {
+    display: block;
+    width: 75%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.contents .tab-box #notice ul li:hover {
+    color: var(--main-color);
+}
+
+.contents .tab-box #gall {
+    width: 100%;
+    height: 160px;
+}
+
+.contents .tab-box #gall ul {
+    align-items: center;
+    gap: 5px;
+    height: 100%;
+}
+
+.contents .tab-box #gall li {
+    width: 33.333%;
+}
+
+.contents .tab-box #gall li img {
+    width: 100%;
+}
+
+.banner {
+    background-image: url(/images/banner.jpg);
+    width: 33.3333%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.direct {
+    background-image: url(/images/banner.jpg);
+    width: 33.3333%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.direct p {
+    color: #fff;
+}
+
+.banner p {
+    color: #fff;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    padding: 30px;
+}
+
+footer h1 {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+footer .copy {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.family button {
+    padding: 10px;
+}
+
+.family select {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+button {
+    border-style: none;
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+
+
+.pop-dim {
+    width: 100%;
+    height: 100%;
+    background-color: #00000068;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.wrap{
+    position: relative;
+}
+.popup {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #000;
+}
+
+
+.popup .pop {
+    white-space: wrap;
+    text-align: center;
+    padding: 20px;
+}
+
+.popup .pop button {
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.popup .pop h3 {
+    margin-bottom: 20px;
+}
