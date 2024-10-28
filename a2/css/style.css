@@ -137,15 +137,15 @@ nav>ul {
 }
 
 .slide1 {
-    background-image: url(/images/slide1.jpg);
+    background-image: url(../images/slide1.jpg);
 }
 
 .slide2 {
-    background-image: url(/images/slide2.jpg);
+    background-image: url(../images/slide2.jpg);
 }
 
 .slide3 {
-    background-image: url(/images/slide3.jpg);
+    background-image: url(../images/slide3.jpg);
 }
 
 .slide .summary {
@@ -209,8 +209,11 @@ nav>ul {
     width: 100%;
     top: 0;
     background-color: #fff;
-}
 
+}
+.tab.on{
+    z-index: 99;
+}
 
 .contents .tab-box #notice {
     width: 100%;
@@ -254,7 +257,7 @@ nav>ul {
 }
 
 .banner {
-    background-image: url(/images/banner.jpg);
+    background-image: url(../images/banner.jpg);
     width: 33.3333%;
     height: 100%;
     display: flex;
@@ -264,7 +267,7 @@ nav>ul {
 }
 
 .direct {
-    background-image: url(/images/banner.jpg);
+    background-image: url(../images/banner.jpg);
     width: 33.3333%;
     height: 100%;
     display: flex;
