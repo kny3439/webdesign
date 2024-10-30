@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
     margin: 0;
     padding: 0;
@@ -46,7 +48,7 @@ header {
 }
 
 header.on::after {
-    height: 150px;
+    height: 120px;
 }
 
 header::after {
@@ -192,6 +194,7 @@ header .main-menu:hover a {
     width: 100%;
     border: 1px solid #000;
     background-color: #fff;
+    height: calc(100% - 50px);
 }
 
 .notice ul li {
@@ -199,7 +202,7 @@ header .main-menu:hover a {
     justify-content: space-between;
 }
 
-.notice ul li:hover{
+.notice ul li:hover {
     background-color: var(--sub-color);
     color: #fff;
 }
@@ -216,7 +219,7 @@ header .main-menu:hover a {
 .gall {
     width: 33.3333%;
     height: 100%;
-    
+
 }
 
 .gall h2 {
@@ -235,6 +238,7 @@ header .main-menu:hover a {
     padding: 8px;
     border: 1px solid #000;
     background-color: #fff;
+    height: calc(100% - 50px);
 }
 
 .gall ul li {
@@ -292,7 +296,8 @@ footer .copy ul.footermenu li {
     padding: 0 10px;
     font-size: 14px;
 }
-footer .copy ul.footermenu li:hover{
+
+footer .copy ul.footermenu li:hover {
     color: var(--sub-color);
 }
 
@@ -302,21 +307,22 @@ footer .copy>p {
     padding: 0 10px;
 }
 
-footer .family{
+footer .family {
     display: flex;
     align-items: center;
 }
 
-footer select{
-    padding: 8px 20px; 
+footer select {
+    padding: 8px 20px;
 }
-.popup{
+
+.popup {
     position: absolute;
     width: 400px;
     height: 400px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: #fff;
     text-align: center;
     display: flex;
@@ -325,15 +331,22 @@ footer select{
     justify-content: center;
     border: 1px solid #000;
     opacity: 0;
-    transform: .35s;
+    transform: 1s;
 }
-.popup h2{
+
+.popup.on {
+    opacity: 1;
+}
+
+.popup h2 {
     margin-bottom: 30px;
 }
-.popup p{
+
+.popup p {
     margin-bottom: 30px;
 }
-.popup button{
+
+.popup button {
     border-style: none;
     background-color: transparent;
     border: 1px solid #000;

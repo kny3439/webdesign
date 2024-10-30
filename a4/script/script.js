@@ -17,3 +17,11 @@ setInterval(function () {
     $('.slide').fadeOut()
     $('.slide').eq(idx).fadeIn()
 },3000)
+
+$('.notice li:first').click(function(){
+    $('.popup').addClass('on')
+})
+
+$('.popup button').click(function(){
+    $('.popup').removeClass('on')
+})
