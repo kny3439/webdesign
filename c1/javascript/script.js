@@ -14,8 +14,9 @@ $('.popup button').click(function () {
 })
 
 $('.slide').eq(0).siblings().hide()
+idx = 0
 setInterval(function () {
-    idx = 0
+
     idx++
     if (idx === 3) { idx = 0 }
     $('.slide').fadeOut()
